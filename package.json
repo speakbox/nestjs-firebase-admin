@@ -11,6 +11,7 @@
     "*.md"
   ],
   "scripts": {
+    "release": "standard-version",
     "start:dev": "tsc -w",
     "build": "tsc",
     "prepare": "npm run build",
