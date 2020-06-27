@@ -6,7 +6,7 @@
   </a>
 </div>
 
-<h3 align="center">NestJS npm Package Starter</h3>
+<h3 align="center">NestJS Firebase Admin</h3>
 
 <div align="center">
   <a href="https://nestjs.com" target="_blank">
@@ -16,12 +16,8 @@
 
 ### Installation
 
-1. Clone the repo
-2. Run npm/yarn install
-
 ```bash
-cd nestjs-package-starter
-npm install
+npm install @speakbox/nestjs-firebase-admin
 ```
 
 ## Change Log
@@ -34,7 +30,7 @@ Contributions welcome! See [Contributing](CONTRIBUTING.md).
 
 ## Author
 
-**John Biundo (Y Prospect on [Discord](https://discord.gg/G7Qnnhy))**
+**Valentin Prugnaud [@valentinprgnd](https://twitter.com/valentinprgnd)**
 
 ## License
 
