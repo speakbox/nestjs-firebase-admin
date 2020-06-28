@@ -2,6 +2,7 @@ import * as admin from 'firebase-admin';
 
 export default admin.initializeApp({
     credential: admin.credential.applicationDefault(),
+    projectId: process.env.GOOGLE_PROJECT_ID,
 });
 
 declare global {
