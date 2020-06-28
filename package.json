@@ -1,6 +1,6 @@
 {
   "name": "@speakbox/nestjs-firebase-admin",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "NestJS Firebase Admin Service Factory",
   "author": "Valentin Prugnaud <valentin@speakbox.ca>",
   "license": "MIT",
