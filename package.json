@@ -14,7 +14,7 @@
     "release": "standard-version",
     "start:dev": "tsc -w",
     "build": "tsc",
-    "prepare": "npm run build",
+    "prepare": "husky install",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json -c tslint.json",
     "test": "jest",
