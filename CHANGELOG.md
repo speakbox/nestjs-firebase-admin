@@ -1,3 +1,12 @@
+Changelog
+
+### [1.1.3](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.1.2...v1.1.3) (2021-12-22)
+
+
+### Bug Fixes
+
+* config for changelog generation ([88bfc1d](https://github.com/speakbox/nestjs-firebase-admin/commit/88bfc1de841ba8ce45c31c8f8ca088920fa716c2))
+
 ### [1.1.2](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.1.1...v1.1.2) (2021-12-22)
 
 
