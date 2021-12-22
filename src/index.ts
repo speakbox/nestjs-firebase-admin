@@ -1,9 +1,8 @@
 import * as admin from 'firebase-admin';
 
-export default admin.initializeApp({
-    credential: admin.credential.applicationDefault(),
-    projectId: process.env.GOOGLE_PROJECT_ID,
-});
+export * from './firebase/firebase.module';
+export * from './firebase/firebase.service';
+export * from './firebase/firebase.middleware';
 
 declare global {
     // eslint-disable-next-line @typescript-eslint/no-namespace
