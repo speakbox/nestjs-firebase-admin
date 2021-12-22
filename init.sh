@@ -1,2 +1,2 @@
 npm i
-npm i --no-save @nestjs/common @nestjs/core @nestjs/config reflect-metadata
+npx install-group peer --no-save
