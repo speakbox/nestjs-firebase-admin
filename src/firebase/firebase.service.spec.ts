@@ -1,7 +1,7 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { FirebaseService } from './firebase.service';
 import { ConfigService } from '@nestjs/config';
-import { FirebaseModule } from '../firebase/firebase.module';
+import { FirebaseModule } from './firebase.module';
 
 describe('FirebaseService', () => {
   let service: FirebaseService;

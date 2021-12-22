@@ -1,12 +1,11 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { FirebaseService } from './firebase.service';
 import { ConfigService } from '@nestjs/config';
-import { FirebaseModule } from '../firebase/firebase.module';
+import { FirebaseModule } from './firebase.module';
 import { FirebaseMiddleware } from './firebase.middleware';
 import { HttpException } from '@nestjs/common';
 import { getMockReq, getMockRes } from '@jest-mock/express';
-import { auth } from 'firebase-admin';
-import UserRecord = auth.UserRecord;
+import { DecodedIdToken } from 'firebase-admin/auth';
 
 describe('FirebaseMiddleware', () => {
   let middleware: FirebaseMiddleware;
@@ -26,35 +25,35 @@ describe('FirebaseMiddleware', () => {
     expect(middleware).toBeDefined();
   });
 
-  it('it throws an error if authorization header missing', async() => {
+  it('it throws an error if authorization header missing', async () => {
     const req = getMockReq();
     const { res, next } = getMockRes();
 
     await expect(middleware.use(req, res, next)).rejects.toThrow(HttpException);
   });
 
-  it('it throws an error if authorization header is invalid', async() => {
-    jest.spyOn(firebase.auth, 'verifyIdToken').mockRejectedValue(() => new Error())
+  it('it throws an error if authorization header is invalid', async () => {
+    jest.spyOn(firebase.auth, 'verifyIdToken').mockRejectedValue(() => new Error());
     const req = getMockReq({
       headers: {
-        authorization: 'Bearer invalid-token'
-      }
+        authorization: 'Bearer invalid-token',
+      },
     });
     const { res, next } = getMockRes();
 
     await expect(middleware.use(req, res, next)).rejects.toThrow(HttpException);
   });
 
-  it('it calls next if authorization header is valid', async() => {
-    jest.spyOn(firebase.auth, 'verifyIdToken').mockResolvedValue(() => ({} as unknown as UserRecord));
+  it('it calls next if authorization header is valid', async () => {
+    jest.spyOn(firebase.auth, 'verifyIdToken').mockResolvedValue({} as unknown as DecodedIdToken);
     const req = getMockReq({
       headers: {
-        authorization: 'Bearer valid-token'
-      }
+        authorization: 'Bearer valid-token',
+      },
     });
     const { res, next } = getMockRes();
 
-    await middleware.use(req, res, next)
+    await middleware.use(req, res, next);
 
     expect(next).toHaveBeenCalled();
   });

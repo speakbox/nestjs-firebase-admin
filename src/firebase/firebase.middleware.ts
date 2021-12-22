@@ -1,15 +1,9 @@
-import {
-  Injectable,
-  NestMiddleware,
-  HttpStatus,
-  HttpException,
-  Logger,
-} from '@nestjs/common';
-import * as admin from 'firebase-admin';
+import { HttpException, HttpStatus, Injectable, NestMiddleware, Scope } from '@nestjs/common';
+import { DecodedIdToken } from 'firebase-admin/auth';
 import { NextFunction, Request, Response } from 'express';
 import { FirebaseService } from './firebase.service';
 
-@Injectable()
+@Injectable({ scope: Scope.DEFAULT})
 export class FirebaseMiddleware implements NestMiddleware {
   constructor(private firebase: FirebaseService) {}
 
@@ -28,8 +22,6 @@ export class FirebaseMiddleware implements NestMiddleware {
       req.user = await this.firebase.auth.verifyIdToken(token);
       next();
     } catch (error) {
-      !!error.message && Logger.error(error.message);
-
       throw new HttpException(
         error.message || 'Unauthorized',
         HttpStatus.UNAUTHORIZED,
@@ -41,7 +33,7 @@ export class FirebaseMiddleware implements NestMiddleware {
 declare global {
   namespace Express {
     interface Request {
-      user: admin.auth.DecodedIdToken;
+      user: DecodedIdToken;
     }
   }
 }
