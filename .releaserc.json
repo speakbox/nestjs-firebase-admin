@@ -23,7 +23,7 @@
       "preset": "conventionalcommits"
     }],
     ["@semantic-release/changelog", {
-      "changelogTitle": "Changelog",
+      "changelogTitle": "# Changelog",
       "changelogFile": "CHANGELOG.md"
     }],
     ["@semantic-release/git", {
