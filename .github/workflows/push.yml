@@ -1,4 +1,4 @@
-name: 'Build, Lint, Test and Deploy if master'
+name: Release
 
 on: push
 
