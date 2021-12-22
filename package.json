@@ -1,6 +1,6 @@
 {
   "name": "@speakbox/nestjs-firebase-admin",
-  "version": "1.1.0-0",
+  "version": "1.1.0",
   "description": "NestJS Firebase Admin Service Factory",
   "author": "Valentin Prugnaud <valentin@speakbox.ca>",
   "license": "MIT",
@@ -39,7 +39,7 @@
     "@nestjs/config": "^1.1.5"
   },
   "dependencies": {
-    "firebase-admin": "^9.8.0"
+    "firebase-admin": "^10.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^15.0.0",
