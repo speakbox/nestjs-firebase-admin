@@ -6,14 +6,9 @@
 * changelog generation on release ([8d991a1](https://github.com/speakbox/nestjs-firebase-admin/commit/8d991a17660a5d787b2a78a9d7f25ac7b5d36424))
 * fix changelog generator ([6ff0a7e](https://github.com/speakbox/nestjs-firebase-admin/commit/6ff0a7e1c591ba6cf54c733c8be4fb190035d6c2))
 
-# Changelog
+### [1.1.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.1.0-0...v1.1.0) (2021-12-22)
 
-All notable changes to this project will be documented in this file. 
-See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
-
-## [1.1.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.1.0-0...v1.1.0) (2021-12-22)
-
-## [1.1.0-0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.0.2...v1.1.0-0) (2021-12-22)
+### [1.1.0-0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.0.2...v1.1.0-0) (2021-12-22)
 
 
 ### Features
@@ -29,4 +24,4 @@ See [standard-version](https://github.com/conventional-changelog/standard-versio
 
 * add project id support ([93eca1d](https://github.com/speakbox/nestjs-firebase-admin/commit/93eca1d48d01b72ee8fd075d50a2d05d61b967a0))
 
-## 1.0.0 (2020-06-27)
+### 1.0.0 (2020-06-27)
