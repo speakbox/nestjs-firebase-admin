@@ -35,6 +35,30 @@ import { FirebaseModule, FirebaseService } from '@speakbox/nestjs-firebase-admin
 export class AppModule {}
 ```
 
+### Environment variables
+
+This package relies on environment variables to configure the Firebase Admin SDK:
+
+```dotenv
+# Application environment
+# If set to "development", it will assume the use of the Firebase emulators (please see emulator related environment variables below)
+# If set to anything else, it will assume usage inside a Google Cloud environment and attempt to use applicationDefault() credentials
+APP_ENV=production
+
+# ONLY USE THE FOLLOWING IN DEVELOPMENT
+# Firebase emulator
+# Set this variable in your .env if you want to use the Firestore emulator
+FIRESTORE_EMULATOR_HOST=localhost:7979
+
+# Firebase Auth emulator
+# Set this variable in your .env if you want to use the Firebase Auth emulator
+FIREBASE_AUTH_EMULATOR_HOST=localhost:9099
+
+# Firebase Storage emulator
+# Set this variable in your .env if you want to use the Firebase Storage emulator
+STORAGE_EMULATOR_HOST=localhost:9199
+```
+
 ### Using the service
 
 ```typescript
