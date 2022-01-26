@@ -1,21 +1,67 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { FirebaseService } from './firebase.service';
-import { ConfigService } from '@nestjs/config';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 import { FirebaseModule } from './firebase.module';
 
+/**
+ * @NOTE
+ * The order of the tests in this file is important for some reason 🤷🏻‍
+ * Keep development block before production/staging block
+ */
 describe('FirebaseService', () => {
-  let service: FirebaseService;
+  describe('development', () => {
+    let service: FirebaseService;
+    let configService: ConfigService;
+    const mockConfig = {
+      get: jest.fn((key: string) => {
+        if (key === 'APP_ENV') {
+          return 'development';
+        }
 
-  beforeEach(async () => {
-    const module: TestingModule = await Test.createTestingModule({
-      imports: [FirebaseModule],
-      providers: [FirebaseService, ConfigService],
-    }).compile();
+        return 'key';
+      }),
+    };
 
-    service = module.get<FirebaseService>(FirebaseService);
+    beforeEach(async () => {
+      const module: TestingModule = await Test.createTestingModule({
+        imports: [FirebaseModule, ConfigModule],
+        providers: [FirebaseService, ConfigService],
+      })
+        .overrideProvider(ConfigService)
+        .useValue(mockConfig)
+        .compile();
+
+      service = module.get<FirebaseService>(FirebaseService);
+      configService = module.get<ConfigService>(ConfigService);
+    });
+
+    it('should be defined', () => {
+      expect(mockConfig.get).toHaveBeenCalled();
+      expect(service).toBeDefined();
+      expect(service.auth).toBeDefined();
+      expect(service.firestore).toBeDefined();
+      expect(service.storage).toBeDefined();
+    });
   });
+  describe('production/staging', () => {
+    let service: FirebaseService;
+    let configService: ConfigService;
 
-  it('should be defined', () => {
-    expect(service).toBeDefined();
+    beforeEach(async () => {
+      const module: TestingModule = await Test.createTestingModule({
+        imports: [FirebaseModule, ConfigModule],
+        providers: [FirebaseService, ConfigService],
+      }).compile();
+
+      service = module.get<FirebaseService>(FirebaseService);
+      configService = module.get<ConfigService>(ConfigService);
+    });
+
+    it('should be defined', () => {
+      expect(service).toBeDefined();
+      expect(service.auth).toBeDefined();
+      expect(service.firestore).toBeDefined();
+      expect(service.storage).toBeDefined();
+    });
   });
 });
