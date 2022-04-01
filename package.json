@@ -34,11 +34,11 @@
   },
   "bugs": "https://github.com/nestjsplus/nestjs-firebase-admin",
   "peerDependencies": {
-    "@nestjs/common": "^8.2.4",
-    "@nestjs/config": "^1.1.5",
-    "@nestjs/core": "^8.2.4",
+    "@nestjs/common": "^8.4.3",
+    "@nestjs/config": "^2.0.0",
+    "@nestjs/core": "^8.4.3",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.4.0"
+    "rxjs": "^7.5.5"
   },
   "dependencies": {
     "firebase-admin": "^10.0.2"
