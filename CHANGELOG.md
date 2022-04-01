@@ -5,6 +5,21 @@
 
 ### Features
 
+* bump ([f2a12f5](https://github.com/speakbox/nestjs-firebase-admin/commit/f2a12f581f3d5aec038bfe6ffbc518ef64af94d6))
+* bump ([4952918](https://github.com/speakbox/nestjs-firebase-admin/commit/4952918a0d89dfe98cb340be3bd02ff3cacb2e83))
+* bump version ([5c39371](https://github.com/speakbox/nestjs-firebase-admin/commit/5c393717392e08ff748ca603434af25bf0813d04))
+* update peer deps ([#7](https://github.com/speakbox/nestjs-firebase-admin/issues/7)) ([e0ccc57](https://github.com/speakbox/nestjs-firebase-admin/commit/e0ccc57884a0da4cd944f8ea2d73e98598c3e423))
+
+
+### Bug Fixes
+
+* update package-lock.json to resolve issue with build ([8aefbc7](https://github.com/speakbox/nestjs-firebase-admin/commit/8aefbc7e770ce397161e04af9b3579f471b01daf))
+
+## [1.2.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.1.4...v1.2.0) (2022-04-01)
+
+
+### Features
+
 * bump ([4952918](https://github.com/speakbox/nestjs-firebase-admin/commit/4952918a0d89dfe98cb340be3bd02ff3cacb2e83))
 * bump version ([5c39371](https://github.com/speakbox/nestjs-firebase-admin/commit/5c393717392e08ff748ca603434af25bf0813d04))
 * update peer deps ([#7](https://github.com/speakbox/nestjs-firebase-admin/issues/7)) ([e0ccc57](https://github.com/speakbox/nestjs-firebase-admin/commit/e0ccc57884a0da4cd944f8ea2d73e98598c3e423))
