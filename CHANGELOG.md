@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.1.4...v1.2.0) (2022-04-01)
+
+
+### Features
+
+* bump version ([5c39371](https://github.com/speakbox/nestjs-firebase-admin/commit/5c393717392e08ff748ca603434af25bf0813d04))
+
+
+### Bug Fixes
+
+* update package-lock.json to resolve issue with build ([8aefbc7](https://github.com/speakbox/nestjs-firebase-admin/commit/8aefbc7e770ce397161e04af9b3579f471b01daf))
+
 ## [1.2.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.1.4...v1.2.0) (2022-01-26)
 
 
