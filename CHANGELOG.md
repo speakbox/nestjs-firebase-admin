@@ -1,5 +1,15 @@
 # Changelog
 
+## [1.3.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.2.0...v1.3.0) (2022-04-01)
+
+
+### Features
+
+* bump ([2c7440b](https://github.com/speakbox/nestjs-firebase-admin/commit/2c7440bdbbd87004f5e6f70fde6e57c34d5e4849))
+* bump ([f2a12f5](https://github.com/speakbox/nestjs-firebase-admin/commit/f2a12f581f3d5aec038bfe6ffbc518ef64af94d6))
+* bump ([4952918](https://github.com/speakbox/nestjs-firebase-admin/commit/4952918a0d89dfe98cb340be3bd02ff3cacb2e83))
+* update peer deps ([#7](https://github.com/speakbox/nestjs-firebase-admin/issues/7)) ([e0ccc57](https://github.com/speakbox/nestjs-firebase-admin/commit/e0ccc57884a0da4cd944f8ea2d73e98598c3e423))
+
 ## [1.2.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.1.4...v1.2.0) (2022-04-01)
 
 
