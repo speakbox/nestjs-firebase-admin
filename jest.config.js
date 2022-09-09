@@ -11,5 +11,5 @@ module.exports = {
   },
   coverageDirectory: "../coverage",
   testEnvironment: "node",
-  resolver: "../jest.resolver.cjs",
+  transformIgnorePatterns: ['^.+\\.js$']
 }
