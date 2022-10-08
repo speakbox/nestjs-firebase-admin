@@ -1,5 +1,16 @@
 # Changelog
 
+## [3.0.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v2.0.0...v3.0.0) (2022-10-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* node 16 upgrade (#8)
+
+### Features
+
+* node 16 upgrade ([#8](https://github.com/speakbox/nestjs-firebase-admin/issues/8)) ([668bbee](https://github.com/speakbox/nestjs-firebase-admin/commit/668bbee5169b7b17220e653411fb07406c626875))
+
 ## [2.0.0](https://github.com/speakbox/nestjs-firebase-admin/compare/v1.3.0...v2.0.0) (2022-09-09)
 
 
