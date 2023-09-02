@@ -5,7 +5,7 @@
   "author": "Valentin Prugnaud <valentin@speakbox.ca>",
   "license": "MIT",
   "engines": {
-    "node": ">=16"
+    "node": ">=20"
   },
   "readmeFilename": "README.md",
   "main": "dist/index.js",
